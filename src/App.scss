@@ -1,0 +1,58 @@
+@import "./styles/variables.scss";
+body,
+html {
+  background-color: $black;
+}
+.app {
+  display: flex;
+
+  color: $white;
+  .side-menu-content {
+    width: 20%;
+    height: 100vh;
+    padding: 0.5em;
+  }
+  .main-content {
+    max-width: 80%;
+    width: 80%;
+    height: 100vh;
+  }
+}
+.main-content {
+  padding: 1em;
+  section {
+    margin-bottom: 1em;
+  }
+}
+section {
+  background-color: $black2;
+  border-radius: 5px;
+  padding: 1em;
+}
+
+.Menuicon {
+  display: none;
+}
+//
+@media (max-width: 480px) {
+  .side-menu-content {
+    display: none;
+  }
+  .side-menu-content.show {
+    display: block;
+    z-index: 1;
+    width: 90%;
+    margin-top: 30px;
+    position: absolute;
+  }
+  .app .main-content {
+    width: 100%;
+    max-width: 100%;
+  }
+  .Menuicon {
+    display: block;
+    position: absolute;
+    margin-left: 0.5em;
+    font-size: xx-large;
+  }
+}

@@ -1,0 +1,86 @@
+@import "../../styles/variables.scss";
+@import "../../styles/common.scss";
+.ag-cell {
+  line-height: 1;
+}
+
+.ag-theme-alpine {
+  --ag-foreground-color: $white;
+  --ag-background-color: transparent;
+  --ag-header-foreground-color: $white;
+  --ag-header-background-color: #271c1c;
+  --ag-odd-row-background-color: transparent;
+}
+
+.filters {
+  @extend .box;
+  justify-content: space-between;
+  margin-bottom: 1em;
+  select,
+  input,
+  option {
+    background-color: transparent;
+    margin: 0 10px;
+    border: 1px solid #eee;
+    color: $white;
+    padding: 0.25em;
+    border-radius: 5px;
+    z-index: 1;
+    position: relative;
+  }
+}
+select:focus > option {
+  background: #d9d8d9;
+  color: $black;
+}
+.date-range-filter {
+  position: relative;
+}
+.date-range-filter > .rdrDateRangePicker {
+  position: absolute;
+  right: 0;
+  top: 27px;
+  z-index: 1;
+  display: none;
+  background: #161d30;
+}
+.date-range-filter.show > .rdrDateRangePicker > div:first-child {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+  /* color: #fff; */
+  padding: 5px;
+}
+.date-range-filter.show > .rdrDateRangePicker .menu-item {
+  position: relative;
+  font-size: 20px;
+  color: #eee;
+  z-index: 1;
+  border-radius: 50%;
+  background: #eee;
+  text-align: center;
+  cursor: pointer;
+  width: 30px;
+  padding-top: 5px;
+}
+.date-range-filter.show > .rdrDateRangePicker {
+  display: block;
+}
+.actions {
+  display: flex;
+  padding: 10px;
+  justify-content: flex-end;
+  .btn {
+    background-color: transparent;
+    margin-right: 10px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: $white;
+    cursor: pointer;
+  }
+  .primary {
+    background-color: $purple;
+  }
+}

@@ -1,0 +1,13 @@
+@import '../../styles/variables.scss';
+@import '../../styles/common.scss';
+.stat-item {
+  @extend .box;
+  margin-bottom: 2em;
+  .icon {
+    padding: 1em;
+    background-color: $white;
+    border-radius: 50%;
+    color: $black;
+    margin-right: 1em;
+  }
+}
